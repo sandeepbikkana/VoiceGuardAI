@@ -1,22 +1,22 @@
-CI/CD Pipeline for ML Application (Deepfake Pipeline Demo)
+CI/CD Pipeline for ML Application (Task 11)
 Overview
 
-This repository demonstrates a CI/CD pipeline for an ML-style application, designed in the context of a deepfake processing system.
+This repository demonstrates a CI/CD pipeline for an ML-style application, created to satisfy Task 11: CI/CD Pipeline for Deepfake Processing.
 
-The focus of this project is CI/CD automation—including testing, linting, containerization, and deployment.
-A minimal placeholder application is used instead of an actual deepfake model to keep the emphasis on DevOps practices.
+The focus is on automation and deployment, not on model complexity.
+A minimal placeholder service is used to represent where deepfake inference logic would exist in a real system.
 
-Key Features
+What This Project Demonstrates
 
 Automated CI using GitHub Actions
 
 Unit testing with PyTest
 
-Code quality checks using Flake8
+Code quality checks with Flake8
 
-Containerized build with Docker
+Dockerized application build
 
-Deployment using Render (Free Tier)
+Deployment using a free-tier cloud service (Render)
 
 Tech Stack
 
@@ -30,94 +30,70 @@ Docker
 
 Render Web Service
 
-Project Structure
+Repository Structure
 .
 ├── app.py
 ├── test_app.py
 ├── requirements.txt
 ├── Dockerfile
 ├── README.md
-└── .github/
-    └── workflows/
-        └── ci.yml
+└── .github/workflows/ci.yml
 
-CI/CD Pipeline
+CI/CD Workflow
 
-The pipeline runs automatically on:
+The pipeline runs automatically on every push and pull request and performs:
 
-push
+Dependency installation
 
-pull_request
+Test execution
 
-Pipeline Steps
+Lint checks
 
-Checkout code
+Docker build
 
-Setup Python
+Application deployment
 
-Install dependencies
+Application Note
 
-Run unit tests
+This project does not implement actual deepfake processing.
 
-Run lint checks
+The application acts as a placeholder inference service to demonstrate how a deepfake model would be:
 
-Build Docker image
+Tested
 
-Deploy application
+Built
 
-Application Description
+Containerized
 
-The application exposes a lightweight API endpoint that represents an ML inference service.
+Deployed using CI/CD
 
-Note:
-The actual deepfake model logic is intentionally omitted. In a real system, this service would host a trained deepfake detection or generation model.
-
-This approach reflects real-world ML DevOps workflows, where CI/CD pipelines are validated independently of model complexity.
+This reflects real-world ML DevOps workflows where pipelines are built independently of model logic.
 
 Deployment
 
 The application is deployed as a Render Web Service (Free Tier).
 
-Docker-based deployment
-
-Automatic port detection
-
-Free-tier sleep behavior is acceptable for demo purposes
-
 Live URL:
 https://voiceguardai.onrender.com
 
-Model Lifecycle (Conceptual)
+Free-tier instances may sleep after inactivity, which is acceptable for demo purposes.
 
-In a production deepfake pipeline:
+Screenshots
 
-DVC would manage dataset and model versions
+Evidence of successful CI/CD execution and deployment.
 
-MLflow would track experiments and artifacts
+GitHub Actions – CI Success
 
-These tools are referenced conceptually to maintain focus on CI/CD.
+Render Deployment Logs
 
-Evidence
+Render Service – Live
 
-Successful GitHub Actions CI runs
-
-Docker build logs
-
-Render deployment status and application logs
-
-Live endpoint response
-
-Screenshots are included in the submission.
+Live Application Response
 
 References
 
-GitHub Actions Python CI documentation
+GitHub Actions – Python CI
 
 Docker CI/CD examples
 
 Render Web Services documentation
-
-Summary
-
-This project successfully demonstrates a CI/CD pipeline suitable for ML and deepfake-style applications.
-While the application logic is minimal, the pipeline design reflects production-grade DevOps practices and satisfies Task 11 requirements.
