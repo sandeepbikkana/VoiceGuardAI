@@ -1,9 +1,12 @@
-from time import sleep
+from fastapi import FastAPI
+import os
 
-def detect_deepfake():
-    return "CI/CD pipeline demo"
+app = FastAPI()
+
+@app.get("/")
+def root():
+    return {"status": "CI/CD pipeline demo"}
 
 if __name__ == "__main__":
-    print(detect_deepfake())
-    while True:
-        sleep(60)
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 10000)))
