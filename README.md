@@ -16,9 +16,9 @@ Code quality checks with Flake8
 
 Dockerized application build
 
-Deployment using a free-tier cloud service (Render)
+Deployment using a free-tier cloud service 
 
-Tech Stack
+----Tech Stack----
 
 Python 3.9
 
@@ -28,7 +28,7 @@ PyTest, Flake8
 
 Docker
 
-Render Web Service
+Ec2
 
 Repository Structure
 .
@@ -39,54 +39,54 @@ Repository Structure
 ├── README.md
 └── .github/workflows/ci.yml
 
-CI/CD Workflow
+----CI/CD Workflow----
 
-The pipeline runs automatically on every push and pull request and performs:
+1)The pipeline runs automatically on every push and pull request and performs:
 
-Dependency installation
+2)Dependency installation
 
-Test execution
+3)Test execution
 
-Lint checks
+4)Lint checks
 
-Docker build
+5)Docker build
 
-Application deployment
+6)Application deployment
 
-Application Note
+---Application Note---
 
 This project does not implement actual deepfake processing.
 
 The application acts as a placeholder inference service to demonstrate how a deepfake model would be:
 
-Tested
+1)Tested
 
-Built
+2)Built
 
-Containerized
+3)Containerized
 
-Deployed using CI/CD
+4)Deployed using CI/CD
 
 This reflects real-world ML DevOps workflows where pipelines are built independently of model logic.
 
-Deployment
+----Deployment----
 
-The application is deployed as a Render Web Service (Free Tier).
+The application is deployed as a Web Service (Free Tier).
 
 Live URL:
-https://voiceguardai.onrender.com
 
-Free-tier instances may sleep after inactivity, which is acceptable for demo purposes.
+http://13.204.79.36:8000/health
 
-Screenshots
+
+---Screenshots---
 
 Evidence of successful CI/CD execution and deployment.
 
 GitHub Actions – CI Success
 
-Render Deployment Logs
+Deployment Logs
 
-Render Service – Live
+Service – Live
 
 Live Application Response
 
