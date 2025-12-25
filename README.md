@@ -95,5 +95,3 @@ References
 GitHub Actions – Python CI
 
 Docker CI/CD examples
-
-Render Web Services documentation
